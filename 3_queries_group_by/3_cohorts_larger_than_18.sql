@@ -1,4 +1,5 @@
-SELECT cohorts.name as cohort_name, count(students.cohort_id) as student_count
+SELECT  cohorts.name as cohort_name,
+        count(students.cohort_id) as student_count
 FROM cohorts
 JOIN students ON cohorts.id = cohort_id
 GROUP BY cohorts.name
